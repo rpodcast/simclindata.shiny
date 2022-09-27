@@ -1,0 +1,56 @@
+---
+title: "Phuse PODR Database Exploration"
+format: html
+---
+
+## Connect to Database
+
+First let's connect to the PostGres database using the provided credentials, and then list what tables are available.
+
+```{r}
+library(DBI)
+library(dplyr)
+library(dbplyr)
+
+con <- DBI::dbConnect(
+  RPostgres::Postgres(),
+  host = Sys.getenv("PG_HOST"),
+  dbname = Sys.getenv("PG_DBNAME"),
+  port = Sys.getenv("PG_PORT"),
+  user = Sys.getenv("PG_USER"),
+  password = Sys.getenv("PG_PASS")
+)
+
+DBI::dbListTables(con)
+
+```
+
+## Exploring Tables of Interest
+
+A document with descriptions of the tables in the database is available on the PODR GitHub repository at <https://github.com/phuse-org/PODR>. A copy of the document is available in the `docs` directory. Unfortunately it only describes a few of the tables present.
+
+Misc notes:
+
+* Cannot find `US_NIH_CDISC`
+
+### US_CLINICAL_TRIALS_DESIGNS
+
+This could be interesting to tease out details typically part of a design section of a protocol.
+
+```{r}
+tbl(con, "us_clinical_trials_designs") %>% dplyr::glimpse()
+```
+
+
+### US_FDA_510K
+
+```{r}
+tbl(con, "us_fda_510k_devices") %>% dplyr::glimpse()
+```
+
+### ES_AEMPS_Nomenclator
+
+```{r}
+tbl(con, "es_aemps_nomenclator_medicamentos") %>% dplyr::glimpse()
+```
+

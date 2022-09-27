@@ -1,0 +1,142 @@
+---
+title: "NIHPO Synth Data Exploration"
+format: html
+---
+
+## Introduction
+
+This document explores one of the data exports created in the NIHPO project.
+
+```{r}
+library(DBI)
+library(RSQLite)
+library(dplyr)
+library(tidyr)
+library(haven)
+library(readr)
+
+data_dir <- "data/sdtm_1000"
+```
+
+
+
+
+
+## SQLite Database
+
+```{r}
+con <- DBI::dbConnect(
+  RSQLite::SQLite(),
+  dbname = file.path(data_dir, "demo_2.sqlite3")
+)
+
+DBI::dbListTables(con)
+```
+
+## Explore database tables
+
+### CDISC_SDTM_DS
+
+```{r}
+tbl(con, "CDISC_SDTM_DS") %>% dplyr::glimpse()
+```
+
+```{r}
+tbl(con, "CDISC_SDTM_DS") %>%
+  collect() %>%
+  View()
+```
+
+
+### CDISC_SDTM_TV
+
+```{r}
+tbl(con, "CDISC_SDTM_TV") %>% dplyr::glimpse()
+```
+
+### CDISC_SDTM_SV
+
+```{r}
+tbl(con, "CDISC_SDTM_SV") %>% dplyr::glimpse()
+```
+
+### CDISC_SDTM_TA
+
+```{r}
+tbl(con, "CDISC_SDTM_TA") %>% dplyr::glimpse()
+```
+
+
+### CDISC_SDTM_DM
+
+```{r}
+tbl(con, "CDISC_SDTM_DM") %>% dplyr::glimpse()
+```
+
+For comparison let's import the sas transport version
+
+```{r}
+cdisc_dm <- haven::read_xpt(file.path(data_dir, "sas_files", "DM.xpt"))
+dplyr::glimpse(cdisc_dm)
+```
+
+
+### NIHPO_API
+
+This is just a 1-record table with contact info for NIHPO
+
+```{r}
+tbl(con, "NIHPO_API") %>% dplyr::glimpse()
+```
+Tables with the `Synth` prefix look like they were simulated using the Synthea tool.
+
+### Synth_PHR_Demographics
+
+```{r}
+tbl(con, "Synth_PHR_Demographics") %>% dplyr::glimpse()
+```
+
+### Synth_PHR_Conditions
+
+```{r}
+tbl(con, "Synth_PHR_Conditions") %>% dplyr::glimpse()
+```
+
+### Synth_PHR_Devices
+
+```{r}
+tbl(con, "Synth_PHR_Devices") %>% dplyr::glimpse()
+```
+
+
+### Synth_PHR_Drugs
+
+```{r}
+tbl(con, "Synth_PHR_Drugs") %>% dplyr::glimpse()
+```
+
+### Synth_PHR_Lab_Results
+
+```{r}
+tbl(con, "Synth_PHR_Lab_Results") %>% dplyr::glimpse()
+```
+
+
+
+### Synth_PHR_Procedures
+
+```{r}
+tbl(con, "Synth_PHR_Procedures") %>% dplyr::glimpse()
+```
+
+### Synth_PHR_Providers
+
+```{r}
+tbl(con, "Synth_PHR_Providers") %>% dplyr::glimpse()
+```
+
+### Synth_PHR_Vitals
+
+```{r}
+tbl(con, "Synth_PHR_Vitals") %>% dplyr::glimpse()
+```

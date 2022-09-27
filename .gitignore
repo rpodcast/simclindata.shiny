@@ -6,3 +6,4 @@
 .DS_Store
 data/*
 !data/README.md
+.Renviron

@@ -134,6 +134,47 @@
       "Hash": "e9c08b94391e9f3f97355841229124f2",
       "Requirements": []
     },
+    "admiral": {
+      "Package": "admiral",
+      "Version": "0.8.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "0aa334b05b3a2185283d8ab70687d993",
+      "Requirements": [
+        "admiraldev",
+        "assertthat",
+        "dplyr",
+        "hms",
+        "lifecycle",
+        "lubridate",
+        "magrittr",
+        "purrr",
+        "rlang",
+        "stringr",
+        "tidyr",
+        "tidyselect"
+      ]
+    },
+    "admiraldev": {
+      "Package": "admiraldev",
+      "Version": "0.1.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "d4ea0e3868e03819b2d3f8aef44729c0",
+      "Requirements": [
+        "assertthat",
+        "dplyr",
+        "hms",
+        "lifecycle",
+        "lubridate",
+        "magrittr",
+        "purrr",
+        "rlang",
+        "stringr",
+        "tidyr",
+        "tidyselect"
+      ]
+    },
     "askpass": {
       "Package": "askpass",
       "Version": "1.1",
