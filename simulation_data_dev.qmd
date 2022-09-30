@@ -22,6 +22,8 @@ data_dir <- "data/synth_dev_files"
 
 Creating a new synthetic PHR works by specifying a country and the number of subjects. For my virtual trial, the goal is to include multiple countries to mimic a real-world trial.
 
+### Testing 
+
 For testing the interface, I will create the following countries and number of subjects
 
 -   United States: 20
@@ -44,6 +46,12 @@ Next the interface asks for demographic information to use in the simulations
 -   Drugs Randomization: Totally Random
 
 File created: `synth_phr_dev.sqlite3`
+
+### Prod
+
+The goal is to generate PHR records that will be matched up with patients in the CDISC01 Phuse test data patients. This won't be exact, but we can at least act like they are close.
+
+
 
 ```{r}
 #| label: synth_phr_explore

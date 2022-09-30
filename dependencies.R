@@ -13,3 +13,14 @@ library(purrr)
 library(dm)
 library(admiral)
 library(lubridate)
+library(arrow)
+
+# github dependencies
+# renv::install("rpodcast/random.cdisc.data")
+library(random.cdisc.data)
+
+# renv::install("OHDSI/CommonDataModel")
+library(CommonDataModel)
+
+# renv::install("OHDSI/Eunomia")
+library(Eunomia)

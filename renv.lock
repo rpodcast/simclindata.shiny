@@ -9,6 +9,28 @@
     ]
   },
   "Packages": {
+    "CommonDataModel": {
+      "Package": "CommonDataModel",
+      "Version": "0.1.0",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "OHDSI",
+      "RemoteRepo": "CommonDataModel",
+      "RemoteRef": "main",
+      "RemoteSha": "31c7b54c2b45f8b3855cb82ef57aa8ad4638177b",
+      "Hash": "54aecc10ec3179a95938598e68bf86b6",
+      "Requirements": [
+        "DBI",
+        "DatabaseConnector",
+        "SqlRender",
+        "dplyr",
+        "readr",
+        "readxl",
+        "rmarkdown",
+        "stringr"
+      ]
+    },
     "DBI": {
       "Package": "DBI",
       "Version": "1.1.3",
@@ -16,6 +38,41 @@
       "Repository": "RSPM",
       "Hash": "b2866e62bab9378c3cc9476a1954226b",
       "Requirements": []
+    },
+    "DatabaseConnector": {
+      "Package": "DatabaseConnector",
+      "Version": "5.1.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "7efe1532a5256de9dd7f2f8d90b4e6da",
+      "Requirements": [
+        "DBI",
+        "SqlRender",
+        "bit64",
+        "rJava",
+        "readr",
+        "rlang",
+        "stringr",
+        "urltools"
+      ]
+    },
+    "Eunomia": {
+      "Package": "Eunomia",
+      "Version": "1.0.2",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "OHDSI",
+      "RemoteRepo": "Eunomia",
+      "RemoteRef": "main",
+      "RemoteSha": "e330860e581bcb33896ef1dbac29549224e0990c",
+      "Hash": "b6c907d55cf708be10357f89191bec21",
+      "Requirements": [
+        "DatabaseConnector",
+        "RSQLite",
+        "SqlRender",
+        "readr"
+      ]
     },
     "MASS": {
       "Package": "MASS",
@@ -134,6 +191,18 @@
       "Hash": "e9c08b94391e9f3f97355841229124f2",
       "Requirements": []
     },
+    "SqlRender": {
+      "Package": "SqlRender",
+      "Version": "1.10.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "ce817a84681549f442cc4b240f2028aa",
+      "Requirements": [
+        "checkmate",
+        "rJava",
+        "rlang"
+      ]
+    },
     "admiral": {
       "Package": "admiral",
       "Version": "0.8.0",
@@ -173,6 +242,23 @@
         "stringr",
         "tidyr",
         "tidyselect"
+      ]
+    },
+    "arrow": {
+      "Package": "arrow",
+      "Version": "9.0.0.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "a5062a6f58c335252dc427e86aa9ca8e",
+      "Requirements": [
+        "R6",
+        "assertthat",
+        "bit64",
+        "cpp11",
+        "purrr",
+        "rlang",
+        "tidyselect",
+        "vctrs"
       ]
     },
     "askpass": {
@@ -292,6 +378,27 @@
       "Requirements": [
         "R6",
         "processx"
+      ]
+    },
+    "cellranger": {
+      "Package": "cellranger",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "f61dbaec772ccd2e17705c1e872e9e7c",
+      "Requirements": [
+        "rematch",
+        "tibble"
+      ]
+    },
+    "checkmate": {
+      "Package": "checkmate",
+      "Version": "2.1.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "147e4db6909d8814bb30f671b49d7e06",
+      "Requirements": [
+        "backports"
       ]
     },
     "cli": {
@@ -1170,6 +1277,36 @@
         "rlang"
       ]
     },
+    "rJava": {
+      "Package": "rJava",
+      "Version": "1.0-6",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "0415819f6baa75d86d52483f7292b623",
+      "Requirements": []
+    },
+    "random.cdisc.data": {
+      "Package": "random.cdisc.data",
+      "Version": "0.3.13.9999",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "rpodcast",
+      "RemoteRepo": "random.cdisc.data",
+      "RemoteRef": "main",
+      "RemoteSha": "d30e9e4f0029b962f44ec1c6356b13ac2c8d9e16",
+      "Hash": "78eb92aab7a6ffb3b830f854fc8d0421",
+      "Requirements": [
+        "checkmate",
+        "dplyr",
+        "lubridate",
+        "magrittr",
+        "rlang",
+        "tibble",
+        "tidyr",
+        "yaml"
+      ]
+    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -1197,6 +1334,27 @@
         "tzdb",
         "vroom"
       ]
+    },
+    "readxl": {
+      "Package": "readxl",
+      "Version": "1.4.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "5c1fbc365ac0a3fe7728ac79108b8e64",
+      "Requirements": [
+        "cellranger",
+        "cpp11",
+        "progress",
+        "tibble"
+      ]
+    },
+    "rematch": {
+      "Package": "rematch",
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c66b930d20bb6d858cd18e1cebcfae5c",
+      "Requirements": []
     },
     "rematch2": {
       "Package": "rematch2",
@@ -1241,6 +1399,25 @@
       "Repository": "RSPM",
       "Hash": "971c3d698fc06dabdac6bc4bcda72dc4",
       "Requirements": []
+    },
+    "rmarkdown": {
+      "Package": "rmarkdown",
+      "Version": "2.16",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "0f3eaa1547e2c6880d4de1c043ac6826",
+      "Requirements": [
+        "bslib",
+        "evaluate",
+        "htmltools",
+        "jquerylib",
+        "jsonlite",
+        "knitr",
+        "stringr",
+        "tinytex",
+        "xfun",
+        "yaml"
+      ]
     },
     "roxygen2": {
       "Package": "roxygen2",
@@ -1446,6 +1623,26 @@
         "vctrs"
       ]
     },
+    "tinytex": {
+      "Package": "tinytex",
+      "Version": "0.42",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "7629c6c1540835d5248e6e7df265fa74",
+      "Requirements": [
+        "xfun"
+      ]
+    },
+    "triebeard": {
+      "Package": "triebeard",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "847a9d113b78baca4a9a8639609ea228",
+      "Requirements": [
+        "Rcpp"
+      ]
+    },
     "tzdb": {
       "Package": "tzdb",
       "Version": "0.3.0",
@@ -1454,6 +1651,17 @@
       "Hash": "b2e1cbce7c903eaf23ec05c58e59fb5e",
       "Requirements": [
         "cpp11"
+      ]
+    },
+    "urltools": {
+      "Package": "urltools",
+      "Version": "1.7.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "e86a704261a105f4703f653e05defa3e",
+      "Requirements": [
+        "Rcpp",
+        "triebeard"
       ]
     },
     "usethis": {

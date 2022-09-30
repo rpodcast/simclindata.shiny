@@ -18,7 +18,7 @@ ENV QUARTO_VERSION=$QUARTO_VERSION
 # key dependencies for certain R packages
 RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends software-properties-common curl wget libssl-dev libxml2-dev libsodium-dev imagemagick libmagick++-dev libgit2-dev libssh2-1-dev zlib1g-dev librsvg2-dev libudunits2-dev libcurl4-openssl-dev python3-pip pandoc libzip-dev libfreetype6-dev libfontconfig1-dev tk libpq5 libxt6 openssh-client openssh-server \
+    && apt-get -y install --no-install-recommends software-properties-common curl wget libssl-dev libxml2-dev libsodium-dev imagemagick libmagick++-dev libgit2-dev libssh2-1-dev zlib1g-dev librsvg2-dev libudunits2-dev libcurl4-openssl-dev python3-pip pandoc libzip-dev libfreetype6-dev libfontconfig1-dev tk libpq5 libxt6 openssh-client openssh-server default-jdk \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 RUN /rocker_scripts/install_rstudio.sh
@@ -38,7 +38,7 @@ RUN echo "RENV_PATHS_CACHE=/renv/cache" >> /usr/local/lib/R/etc/Renviron
 #     && apt-get -y install --no-install-recommends ---packages list----
 
 # [Optional] Uncomment this section to install additional R packages.
-RUN install2.r --error --skipinstalled --ncpus -1 renv remotes
+RUN install2.r --error --skipinstalled --ncpus -1 renv remotes rJava
 
 EXPOSE 8787
 

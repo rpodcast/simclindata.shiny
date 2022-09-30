@@ -1,0 +1,39 @@
+---
+title: "Synthea PHR data explore and prep"
+format: html
+---
+
+
+```{r}
+library(readr)
+library(dplyr)
+library(arrow)
+library(janitor)
+
+states_small <- c("CA", "FL", "IL", "IN", "MA", "NY", "PA", "TX", "WA")
+synth_dir <- "data/synthea_phr_files"
+synth_state_dirs <- paste0("output_", states_small)
+
+```
+
+## Resources
+
+* Data dictionary for each CSV file: <https://github.com/synthetichealth/synthea/wiki/CSV-File-Data-Dictionary>
+
+## Patients
+
+```{r}
+pat_df <- readr::read_csv("data/synthea_phr_files/output_CA/csv/patients.csv")
+```
+
+## Observations
+
+```{r}
+obs_df <- readr::read_csv("data/synthea_phr_files/output_CA/csv/observations.csv")
+```
+
+## Encounters
+
+```{r}
+encounters_df <- readr::read_csv("data/synthea_phr_files/output_CA/csv/encounters.csv")
+```

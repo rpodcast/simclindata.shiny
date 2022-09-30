@@ -1,0 +1,44 @@
+---
+title: "phuse_testdata_explore"
+format: html
+---
+
+
+```{r}
+#| label: setup
+#| include: false
+library(dplyr)
+library(tidyr)
+library(haven)
+library(janitor)
+library(scda)
+library(scda.2022)
+
+data_dir <- "data/TDF_ADaM_v1.0"
+```
+
+## Explore Roche scda synthetic data
+
+```{r}
+data("rcd_2022_06_27")
+
+scda_adsl <- rcd_2022_06_27$adsl
+
+scda_advs <- rcd_2022_06_27$advs
+
+adsl_subj <- sort(unique(scda_adsl$USUBJID))
+advs_subj <- sort(unique(scda_advs$USUBJID))
+
+rcd_2022_06_27$adsl %>%
+  tabyl(COUNTRY)
+```
+
+
+
+```{r}
+phuse_adsl <- read_xpt(file.path(here::here(), data_dir, "adsl.xpt"))
+
+phuse_adsl %>%
+  tabyl(SEX)
+```
+

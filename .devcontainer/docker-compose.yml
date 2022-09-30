@@ -19,6 +19,13 @@ services:
     command: sleep infinity
     env_file: .env
 
+  rpharmadb:
+    image: postgres:13
+    restart: unless-stopped
+    volumes:
+      - postdb-data:/data/db
+    env_file: .env
+
   rstudiodevcontainer:
     build:
       context: ./rstudio_docker
@@ -36,3 +43,6 @@ services:
     ports:
       - ${LOCAL_PORT}:8787
     env_file: .env
+
+volumes:
+  postdb-data:
