@@ -1,8 +1,8 @@
 Package: simclindata.shiny
-Title: PKG_TITLE
+Title: Synthetic COVID-19 Data Review Application
 Version: 0.0.0.9000
 Authors@R: person('Eric', 'Nantz', email = 'theRcast@gmail.com', role = c('cre', 'aut'))
-Description: PKG_DESC.
+Description: Synthetic COVID-19 Data Review Application
 License: MIT + file LICENSE
 Imports: 
     bs4Dash,
