@@ -28,17 +28,11 @@ app_server <- function(input, output, session) {
       pull()
   })
 
-  default_coordinates <- compute_default_coordinates(con)
-
   # reactive for encounters subset
   # key input: dateselect
   encounters_rc <- reactive({
     req(date_encounters())
     req(class_encounters())
-    #req(nrow(patients_rc() > 0))
-    if (golem::app_dev()) {
-      whereami::cat_where(whereami::whereami())
-    }
 
     pat_ids <- pat_ids_rc()
 
@@ -58,12 +52,7 @@ app_server <- function(input, output, session) {
   # dynamically re-compute number of encounters based on encounters subset
   providers_rc <- reactive({
     tbl(con, "sim_providers")
-    # #req(nrow(encounters_rc()) > 0)
     req(encounters_rc())
-
-    # if (golem::app_dev()) {
-    #   whereami::cat_where(whereami::whereami())
-    # }
 
     enc_sub <- encounters_rc() %>%
       count(provider, name = "utilization") %>%

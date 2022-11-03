@@ -16,21 +16,6 @@ mod_demographics_ui <- function(id){
       valueBoxOutput(ns("number_diag_covid"), width = 3),
       valueBoxOutput(ns("avg_health_expenses"), width = 3),
       valueBoxOutput(ns("number_prescriptions"), width = 3)
-    ),
-    fluidRow(
-      mod_map_ui(ns("map_1"), title = "Geographic Distribution of Providers"),
-    ),
-    fluidRow(
-      box(
-        plotly::plotlyOutput(ns("enc_pats_bar")),
-        title = "Patients per Encounter",
-        width = 6
-      ),
-      box(
-        plotly::plotlyOutput(ns("outcomes_bar")),
-        title = "Complications",
-        width = 6
-      )
     )
   )
 }
@@ -55,10 +40,6 @@ mod_demographics_server <- function(id, con, patients_rc, providers_rc, encounte
         select(group, id, lat, lon, utilization, color) %>%
         collect()
     })
-
-    # run mapping module
-    map_mod_rc <- mod_map_server("map_1", map_df, default_coordinates, providers_rc)
-
 
     output$avg_health_expenses <- renderValueBox({
       req(patients_rc())
@@ -125,9 +106,7 @@ mod_demographics_server <- function(id, con, patients_rc, providers_rc, encounte
       )
     })
 
-    output$number_gloves <- renderValueBox({
-      # code == 713779008
-      
+    output$number_gloves <- renderValueBox({      
       n_gloves <- tbl(con, "sim_supplies") %>%
         filter(code == 713779008) %>%
         count(description) %>%
@@ -141,47 +120,6 @@ mod_demographics_server <- function(id, con, patients_rc, providers_rc, encounte
         width = NULL
       )
     })
-
-    output$enc_pats_bar <- plotly::renderPlotly({
-      req(encounters_rc())
-
-      # prepare data
-      df <- encounters_rc() %>%
-        distinct(encounterclass, patient) %>%
-        group_by(encounterclass) %>%
-        tally(name = "n_patients") %>%
-        collect()
-
-      p1 <- plot_ly(df, x = ~encounterclass, y = ~n_patients, source = "enc_pats_bar") %>%
-        add_bars() %>%
-        event_register("plotly_click")
-
-      p1
-    })
-
-    output$outcomes_bar <- plotly::renderPlotly({
-      req(encounters_rc())
-
-      # prepare data
-      inpatient_c19_ids <- encounters_rc() %>%
-        filter(reasoncode == 840539006) %>%
-        filter(code == 1505002) %>%
-        distinct(patient) %>%
-        pull()
-
-
-      df <- derive_outcomes_data(con, pat_ids = inpatient_c19_ids) %>%
-        group_by(label) %>%
-        tally(name = "n_patients") %>%
-        collect()
-
-      p1 <- plot_ly(df, x = ~label, y = ~n_patients, source = "outcome_bar") %>%
-        add_bars() %>%
-        event_register("plotly_click")
-
-      p1
-    })
-
   })
 }
 
