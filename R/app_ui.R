@@ -33,34 +33,9 @@ app_ui <- function(request) {
         width = "320px",
         sidebarMenu(
           id = "tabs",
-          sidebarHeader("Filters"),
-          menuItem(
-            "Timeline",
-            icon = icon("calendar-days"),
-            startExpanded = FALSE,
-            mod_dateselect_ui("dateselect_1")
-          ),
-          menuItem(
-            "Patients",
-            icon = icon("user-injured"),
-            startExpanded = FALSE,
-            mod_ageselect_ui("ageselect_1")
-          ),
-          menuItem(
-            "Encounters",
-            icon = icon("truck-medical"),
-            startExpanded = FALSE,
-            mod_encounterselect_ui("encounterselect_1")
-          ),
-          sidebarHeader("Views"),
           menuItem(
             "Simulation Summary",
             tabName = "demographics"
-          ),
-          menuItem(
-            "Health Summaries",
-            icon = icon("hospital"),
-            tabName = "patient_level"
           )
         )
       ),
@@ -68,11 +43,21 @@ app_ui <- function(request) {
         tabItems(
           tabItem(
             tabName = "demographics",
+            fluidRow(
+              column(
+                width = 3,
+                mod_dateselect_ui("dateselect_1")
+              ),
+              column(
+                width = 3,
+                mod_ageselect_ui("ageselect_1")
+              ),
+              column(
+                width = 3,
+                mod_encounterselect_ui("encounterselect_1")
+              )
+            ),
             mod_demographics_ui("demographics_1")
-          ),
-          tabItem(
-            tabName = "patient_level",
-            mod_patient_level_ui("patient_level_1")
           )
         )
       )

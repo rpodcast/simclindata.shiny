@@ -28,15 +28,6 @@ app_server <- function(input, output, session) {
       pull()
   })
 
-  # TODO: Perform this merge only in the relevant output/reactive
-  # each provider belongs to one organization
-  # merge relevant org information into provider df
-  # providers_df <- providers_df %>%
-  #   left_join(
-  #     select(organizations_df, organization = id, organization_name = name, revenue),
-  #     by = "organization"
-  #   )
-
   default_coordinates <- compute_default_coordinates(con)
 
   # reactive for encounters subset
@@ -114,33 +105,11 @@ app_server <- function(input, output, session) {
       filter(patient %in% pat_ids)
   })
 
-
-  updateTabItems(
-    session = session,
-    inputId = "tabs",
-    selected = "demographics"
-  )
-
-  showModal(
-    modalDialog(
-      htmltools::includeMarkdown(app_sys("docs", "welcome.md")),
-      size = "xl",
-      easyClose = TRUE
-    )
-  )
-
-
-  output$current_tab <- renderText({
-    req(input$tabs)
-    input$tabs
-  })
-
   # run modules
   mod_demographics_server("demographics_1", con, patients_rc, providers_rc, encounters_rc, default_coordinates)
   date_encounters <- mod_dateselect_server("dateselect_1", con)
   age_patients <- mod_ageselect_server("ageselect_1")
   class_encounters <- mod_encounterselect_server("encounterselect_1", con)
-  mod_patient_level_server("patient_level_1", con, patients_rc)
 
   # clean connection on exit
   session$onSessionEnded(function() {
