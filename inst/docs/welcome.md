@@ -1,0 +1,3 @@
+# Coherent Sythetic Health Records Application
+
+Welcome to the Coherent Synthetic Health Records Shiny application. This application provides summary statistics, visualizations, and drill-down reporting based on simulated patient-level electronic health records (EHR). These records were generated using [Synthea](https://synthetichealth.github.io/synthea/), an open-source patient population simulation tool. The simulation data utilized in this application accompanies the manuscript **[The "Coherent Data Set": Combining Patient Data and Imaging in a Comprehensive, Synthetic Health Record](https://www.mdpi.com/2079-9292/11/8/1199/htm)**.

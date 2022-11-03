@@ -1,5 +1,1 @@
-PG_HOST="my.host"
-PG_DBNAME="dbname"
-PG_PORT=5432
-PG_USER="acme"
-PG_PASS="coyote"
+synthea_covid19_dir="dev/prototyping/synthea_covid_data"

@@ -1,7 +1,28 @@
-# R Projects Development Template
 
-This repo provides a starting template for a containerized development environment for my R projects in data science and Shiny application development, tailored to both the RStudio IDE as well as Visual Studio Code. For a more detailed description, please see the [`.devcontainer/README.md`](.devcontainer/README.md)),
-
-🎥 Check out this previous [Shiny Developer Series livestream](https://youtu.be/4wRiPG9LM3o) for a hands-on walkthrough of this setup!
+# simclindata.shiny
 
 
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
+
+The goal of simclindata.shiny is to ...
+
+## Installation
+
+You can install the development version of simclindata.shiny from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("rpodcast/simclindata.shiny")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+``` r
+library(simclindata.shiny)
+## basic example code
+```

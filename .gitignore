@@ -4,6 +4,6 @@
 .RData
 .Ruserdata
 .DS_Store
-data/*
-!data/README.md
 .Renviron
+dev/prototyping/*
+!dev/prototyping/README.md

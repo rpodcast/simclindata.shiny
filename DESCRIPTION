@@ -1,0 +1,70 @@
+Package: simclindata.shiny
+Title: PKG_TITLE
+Version: 0.0.0.9000
+Authors@R: person('Eric', 'Nantz', email = 'theRcast@gmail.com', role = c('cre', 'aut'))
+Description: PKG_DESC.
+License: MIT + file LICENSE
+Imports: 
+    bs4Dash,
+    cicerone (>= 1.0.5.9000),
+    config (>= 0.3.1),
+    dbplyr,
+    dplyr,
+    glue,
+    golem (>= 0.3.5),
+    jsonlite,
+    leaflet,
+    lubridate,
+    markdown,
+    plotly,
+    purrr,
+    readr,
+    rintrojs (>= 0.3.2),
+    shiny (>= 1.7.2),
+    shinyWidgets,
+    tidyr,
+    DBI,
+    RSQLite,
+    rlang,
+    pkgload,
+    gt,
+    fontawesome,
+    waiter
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.1
+Suggests: 
+    admiral,
+    bslib (>= 0.4.0.9900),
+    CohortMethod (>= 4.2.3),
+    CommonDataModel (>= 0.1.0),
+    DataQualityDashboard (>= 2.0.0),
+    dm,
+    Eunomia (>= 1.0.2),
+    haven,
+    httpgd,
+    languageserver,
+    listviewer,
+    miniUI,
+    quarto,
+    reactablefmtr,
+    RPostgres,
+    shinyuieditor (>= 0.3.1),
+    testthat (>= 3.0.0),
+    Unravel (>= 0.1.0.9000),
+    whereami
+Remotes: 
+    OHDSI/Eunomia,
+    OHDSI/CommonDataModel,
+    rstudio/bslib,
+    OHDSI/CohortMethod,
+    OHDSI/DataQualityDashboard,
+    rstudio/shinyuieditor,
+    nischalshrestha/Unravel,
+    JohnCoene/cicerone,
+    carlganz/rintrojs
+URL: https://github.com/rpodcast/simclindata.shiny
+BugReports: https://github.com/rpodcast/simclindata.shiny/issues
+Config/testthat/edition: 3
+Depends: 
+    R (>= 2.10)
