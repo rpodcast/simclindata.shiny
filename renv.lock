@@ -9,25 +9,6 @@
     ]
   },
   "Packages": {
-    "Andromeda": {
-      "Package": "Andromeda",
-      "Version": "0.6.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "ae741b16de25b2ab0a87b9f38e159282",
-      "Requirements": [
-        "DBI",
-        "RSQLite",
-        "cli",
-        "dbplyr",
-        "dplyr",
-        "hms",
-        "pillar",
-        "rlang",
-        "tidyselect",
-        "zip"
-      ]
-    },
     "BH": {
       "Package": "BH",
       "Version": "1.78.0-0",
@@ -35,78 +16,6 @@
       "Repository": "RSPM",
       "Hash": "4e348572ffcaa2fb1e610e7a941f6f3a",
       "Requirements": []
-    },
-    "CohortMethod": {
-      "Package": "CohortMethod",
-      "Version": "4.2.3",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "OHDSI",
-      "RemoteRepo": "CohortMethod",
-      "RemoteRef": "main",
-      "RemoteSha": "391b499c9e162f9cbc7c273baeb17c9eb2fdf4a4",
-      "Remotes": "ohdsi/FeatureExtraction, ohdsi/Eunomia",
-      "Hash": "0c742a0e9be1bba15ffaf8f8d7368a6e",
-      "Requirements": [
-        "Andromeda",
-        "Cyclops",
-        "DatabaseConnector",
-        "FeatureExtraction",
-        "ParallelLogger",
-        "Rcpp",
-        "SqlRender",
-        "bit64",
-        "cli",
-        "dplyr",
-        "ggplot2",
-        "gridExtra",
-        "pillar",
-        "plyr",
-        "readr",
-        "rlang",
-        "survival"
-      ]
-    },
-    "CommonDataModel": {
-      "Package": "CommonDataModel",
-      "Version": "0.1.0",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "OHDSI",
-      "RemoteRepo": "CommonDataModel",
-      "RemoteRef": "main",
-      "RemoteSha": "31c7b54c2b45f8b3855cb82ef57aa8ad4638177b",
-      "Hash": "54aecc10ec3179a95938598e68bf86b6",
-      "Requirements": [
-        "DBI",
-        "DatabaseConnector",
-        "SqlRender",
-        "dplyr",
-        "readr",
-        "readxl",
-        "rmarkdown",
-        "stringr"
-      ]
-    },
-    "Cyclops": {
-      "Package": "Cyclops",
-      "Version": "3.2.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "319ed4c34c5b150ebba5e0faadc53847",
-      "Requirements": [
-        "Andromeda",
-        "BH",
-        "Matrix",
-        "Rcpp",
-        "RcppEigen",
-        "bit64",
-        "dplyr",
-        "rlang",
-        "survival"
-      ]
     },
     "DBI": {
       "Package": "DBI",
@@ -124,94 +33,6 @@
       "Hash": "b18b34cfbf932e17803c2e3e4b1a2d2a",
       "Requirements": []
     },
-    "DataQualityDashboard": {
-      "Package": "DataQualityDashboard",
-      "Version": "2.0.0",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "OHDSI",
-      "RemoteRepo": "DataQualityDashboard",
-      "RemoteRef": "main",
-      "RemoteSha": "3425ba428ecfc0fd09f1324b11ac4cf35849524b",
-      "Remotes": "ohdsi/Eunomia",
-      "Hash": "7edfaef17fb0c7c7b270beef45ebd8c8",
-      "Requirements": [
-        "DatabaseConnector",
-        "ParallelLogger",
-        "R.utils",
-        "SqlRender",
-        "dplyr",
-        "jsonlite",
-        "magrittr",
-        "plyr",
-        "rJava",
-        "stringr"
-      ]
-    },
-    "DatabaseConnector": {
-      "Package": "DatabaseConnector",
-      "Version": "5.1.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "7efe1532a5256de9dd7f2f8d90b4e6da",
-      "Requirements": [
-        "DBI",
-        "SqlRender",
-        "bit64",
-        "rJava",
-        "readr",
-        "rlang",
-        "stringr",
-        "urltools"
-      ]
-    },
-    "Eunomia": {
-      "Package": "Eunomia",
-      "Version": "1.0.2",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "OHDSI",
-      "RemoteRepo": "Eunomia",
-      "RemoteRef": "main",
-      "RemoteSha": "e330860e581bcb33896ef1dbac29549224e0990c",
-      "Hash": "b6c907d55cf708be10357f89191bec21",
-      "Requirements": [
-        "DatabaseConnector",
-        "RSQLite",
-        "SqlRender",
-        "readr"
-      ]
-    },
-    "FeatureExtraction": {
-      "Package": "FeatureExtraction",
-      "Version": "3.2.0",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "ohdsi",
-      "RemoteRepo": "FeatureExtraction",
-      "RemoteRef": "main",
-      "RemoteSha": "5363f5f4cdaf8b31ce9f193861169047b11ea41c",
-      "Remotes": "ohdsi/Eunomia",
-      "Hash": "cbb5d4702b83fa3a712377d6d4745fc8",
-      "Requirements": [
-        "Andromeda",
-        "DBI",
-        "DatabaseConnector",
-        "ParallelLogger",
-        "RSQLite",
-        "SqlRender",
-        "cli",
-        "dplyr",
-        "jsonlite",
-        "pillar",
-        "rJava",
-        "readr",
-        "rlang"
-      ]
-    },
     "MASS": {
       "Package": "MASS",
       "Version": "7.3-57",
@@ -228,18 +49,6 @@
       "Hash": "699c47c606293bdfbc9fd78a93c9c8fe",
       "Requirements": [
         "lattice"
-      ]
-    },
-    "ParallelLogger": {
-      "Package": "ParallelLogger",
-      "Version": "3.0.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "ed274761e439cb327f16ea643457d16c",
-      "Requirements": [
-        "jsonlite",
-        "snow",
-        "xml2"
       ]
     },
     "R.cache": {
@@ -300,23 +109,6 @@
       "Hash": "45f0398006e83a5b10b72a90663d8d8c",
       "Requirements": []
     },
-    "RPostgres": {
-      "Package": "RPostgres",
-      "Version": "1.4.4",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "c593ecb8dbca9faf3906431be610ca28",
-      "Requirements": [
-        "DBI",
-        "Rcpp",
-        "bit64",
-        "blob",
-        "hms",
-        "lubridate",
-        "plogr",
-        "withr"
-      ]
-    },
     "RSQLite": {
       "Package": "RSQLite",
       "Version": "2.2.18",
@@ -340,29 +132,6 @@
       "Repository": "RSPM",
       "Hash": "e9c08b94391e9f3f97355841229124f2",
       "Requirements": []
-    },
-    "RcppEigen": {
-      "Package": "RcppEigen",
-      "Version": "0.3.3.9.2",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "4c86baed78388ceb06f88e3e9a1d87f5",
-      "Requirements": [
-        "Matrix",
-        "Rcpp"
-      ]
-    },
-    "SqlRender": {
-      "Package": "SqlRender",
-      "Version": "1.10.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "ce817a84681549f442cc4b240f2028aa",
-      "Requirements": [
-        "checkmate",
-        "rJava",
-        "rlang"
-      ]
     },
     "Unravel": {
       "Package": "Unravel",
@@ -398,47 +167,6 @@
         "tidylog",
         "tidyr",
         "vctrs"
-      ]
-    },
-    "admiral": {
-      "Package": "admiral",
-      "Version": "0.8.4",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "55dd2bfe5c77fa02f80a014c88f6598b",
-      "Requirements": [
-        "admiraldev",
-        "assertthat",
-        "dplyr",
-        "hms",
-        "lifecycle",
-        "lubridate",
-        "magrittr",
-        "purrr",
-        "rlang",
-        "stringr",
-        "tidyr",
-        "tidyselect"
-      ]
-    },
-    "admiraldev": {
-      "Package": "admiraldev",
-      "Version": "0.1.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "d4ea0e3868e03819b2d3f8aef44729c0",
-      "Requirements": [
-        "assertthat",
-        "dplyr",
-        "hms",
-        "lifecycle",
-        "lubridate",
-        "magrittr",
-        "purrr",
-        "rlang",
-        "stringr",
-        "tidyr",
-        "tidyselect"
       ]
     },
     "anytime": {
@@ -487,6 +215,24 @@
       "Repository": "RSPM",
       "Hash": "50c838a310445e954bc13f26f26a6ecf",
       "Requirements": []
+    },
+    "attachment": {
+      "Package": "attachment",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "4471916de6c7b09821741130edf48f58",
+      "Requirements": [
+        "cli",
+        "desc",
+        "glue",
+        "knitr",
+        "magrittr",
+        "rmarkdown",
+        "roxygen2",
+        "stringr",
+        "withr"
+      ]
     },
     "attempt": {
       "Package": "attempt",
@@ -639,45 +385,6 @@
       "Requirements": [
         "R6",
         "processx"
-      ]
-    },
-    "cellranger": {
-      "Package": "cellranger",
-      "Version": "1.1.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "f61dbaec772ccd2e17705c1e872e9e7c",
-      "Requirements": [
-        "rematch",
-        "tibble"
-      ]
-    },
-    "checkmate": {
-      "Package": "checkmate",
-      "Version": "2.1.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "147e4db6909d8814bb30f671b49d7e06",
-      "Requirements": [
-        "backports"
-      ]
-    },
-    "cicerone": {
-      "Package": "cicerone",
-      "Version": "1.0.5.9000",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "JohnCoene",
-      "RemoteRepo": "cicerone",
-      "RemoteRef": "master",
-      "RemoteSha": "1f28ea4c8ccaa3d467f50b4e9635cc4db28bf10b",
-      "Hash": "c27873ebe4ad1e375ab95c33e4fbc7cd",
-      "Requirements": [
-        "R6",
-        "assertthat",
-        "htmltools",
-        "shiny"
       ]
     },
     "cli": {
@@ -923,31 +630,6 @@
       "Hash": "bf1cd206a5d170d132ef75c7537b9bdb",
       "Requirements": []
     },
-    "dm": {
-      "Package": "dm",
-      "Version": "1.0.3",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "875dcd0297f056177e68d58b050294b2",
-      "Requirements": [
-        "DBI",
-        "backports",
-        "cli",
-        "dplyr",
-        "glue",
-        "igraph",
-        "lifecycle",
-        "magrittr",
-        "memoise",
-        "pillar",
-        "purrr",
-        "rlang",
-        "tibble",
-        "tidyr",
-        "tidyselect",
-        "vctrs"
-      ]
-    },
     "downlit": {
       "Package": "downlit",
       "Version": "0.4.2",
@@ -1192,23 +874,6 @@
         "gtable"
       ]
     },
-    "gridlayout": {
-      "Package": "gridlayout",
-      "Version": "0.1.0",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "rstudio",
-      "RemoteRepo": "gridlayout",
-      "RemoteRef": "main",
-      "RemoteSha": "9869487df905ead3ad21c5192602ce1189b33c7f",
-      "Hash": "eb34790b255123ca8f36e9bdf12a2fe0",
-      "Requirements": [
-        "htmltools",
-        "magrittr",
-        "rlang"
-      ]
-    },
     "gt": {
       "Package": "gt",
       "Version": "0.7.0",
@@ -1358,19 +1023,6 @@
         "jsonlite",
         "mime",
         "openssl"
-      ]
-    },
-    "igraph": {
-      "Package": "igraph",
-      "Version": "1.3.5",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "132b06d7060f11ba8b4c7e7f385e9b7a",
-      "Requirements": [
-        "Matrix",
-        "magrittr",
-        "pkgconfig",
-        "rlang"
       ]
     },
     "ini": {
@@ -1795,16 +1447,6 @@
         "viridisLite"
       ]
     },
-    "plyr": {
-      "Package": "plyr",
-      "Version": "1.8.7",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "9c17c6ee41639ebdc1d7266546d3b627",
-      "Requirements": [
-        "Rcpp"
-      ]
-    },
     "png": {
       "Package": "png",
       "Version": "0.1-7",
@@ -1913,14 +1555,6 @@
         "yaml"
       ]
     },
-    "rJava": {
-      "Package": "rJava",
-      "Version": "1.0-6",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "0415819f6baa75d86d52483f7292b623",
-      "Requirements": []
-    },
     "ragg": {
       "Package": "ragg",
       "Version": "1.2.4",
@@ -1997,26 +1631,6 @@
         "reactR"
       ]
     },
-    "reactablefmtr": {
-      "Package": "reactablefmtr",
-      "Version": "2.0.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "03265b5334226d0ad25e1fc170ed6c27",
-      "Requirements": [
-        "dplyr",
-        "htmltools",
-        "htmlwidgets",
-        "magrittr",
-        "purrr",
-        "reactable",
-        "sass",
-        "shiny",
-        "stringr",
-        "tippy",
-        "webshot"
-      ]
-    },
     "readr": {
       "Package": "readr",
       "Version": "2.1.3",
@@ -2036,27 +1650,6 @@
         "tzdb",
         "vroom"
       ]
-    },
-    "readxl": {
-      "Package": "readxl",
-      "Version": "1.4.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "5c1fbc365ac0a3fe7728ac79108b8e64",
-      "Requirements": [
-        "cellranger",
-        "cpp11",
-        "progress",
-        "tibble"
-      ]
-    },
-    "rematch": {
-      "Package": "rematch",
-      "Version": "1.0.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "c66b930d20bb6d858cd18e1cebcfae5c",
-      "Requirements": []
     },
     "rematch2": {
       "Package": "rematch2",
@@ -2300,39 +1893,6 @@
         "shiny"
       ]
     },
-    "shinyuieditor": {
-      "Package": "shinyuieditor",
-      "Version": "0.3.1",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "rstudio",
-      "RemoteRepo": "shinyuieditor",
-      "RemoteRef": "main",
-      "RemoteSha": "852e49d3baa3b1c9397c662f6a9ea7984e98b46e",
-      "Remotes": "rstudio/gridlayout",
-      "Hash": "2b8864351c10beabf3bcea375c8318fc",
-      "Requirements": [
-        "callr",
-        "crayon",
-        "fs",
-        "gridlayout",
-        "httpuv",
-        "jsonlite",
-        "later",
-        "rlang",
-        "shiny",
-        "styler"
-      ]
-    },
-    "snow": {
-      "Package": "snow",
-      "Version": "0.4-4",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "40b74690debd20c57d93d8c246b305d4",
-      "Requirements": []
-    },
     "sourcetools": {
       "Package": "sourcetools",
       "Version": "0.1.7",
@@ -2398,16 +1958,6 @@
         "rprojroot",
         "tibble",
         "withr"
-      ]
-    },
-    "survival": {
-      "Package": "survival",
-      "Version": "3.3-1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "f6189c70451d3d68e0d571235576e833",
-      "Requirements": [
-        "Matrix"
       ]
     },
     "sys": {
@@ -2557,29 +2107,6 @@
         "xfun"
       ]
     },
-    "tippy": {
-      "Package": "tippy",
-      "Version": "0.1.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "39b1d69229e30314e7cba023c777f52d",
-      "Requirements": [
-        "htmltools",
-        "htmlwidgets",
-        "jsonlite",
-        "shiny"
-      ]
-    },
-    "triebeard": {
-      "Package": "triebeard",
-      "Version": "0.3.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "847a9d113b78baca4a9a8639609ea228",
-      "Requirements": [
-        "Rcpp"
-      ]
-    },
     "tzdb": {
       "Package": "tzdb",
       "Version": "0.3.0",
@@ -2600,17 +2127,6 @@
         "cli",
         "curl",
         "xml2"
-      ]
-    },
-    "urltools": {
-      "Package": "urltools",
-      "Version": "1.7.3",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "e86a704261a105f4703f653e05defa3e",
-      "Requirements": [
-        "Rcpp",
-        "triebeard"
       ]
     },
     "usethis": {
@@ -2730,18 +2246,6 @@
         "rematch2",
         "rlang",
         "tibble"
-      ]
-    },
-    "webshot": {
-      "Package": "webshot",
-      "Version": "0.5.4",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "cfd9342c76693ae53108a474aafa1641",
-      "Requirements": [
-        "callr",
-        "jsonlite",
-        "magrittr"
       ]
     },
     "whereami": {
